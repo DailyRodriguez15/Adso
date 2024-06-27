@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nuevo paciente</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="img/logo.png" alt="" width="110px">
+        <span class="d-none d-lg-block"></span>
+      </a>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item mb-3 d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item mb-3 dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0 mt-3" href="#" data-bs-toggle="dropdown">
+            <img src="img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-gear"></i>
+                <span>Configuracion de la cuenta</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Necesitas ayuda?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Desconectar</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" style="background-color: rgb(234, 244, 248);">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-lines-fill"></i><span>Administrador</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="personal.html">
+              <i class="bi bi-circle"></i><span>Nuevo personal</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Medico</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Asistencial</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people-fill"></i><span>Mis pacientes</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="#"  class="active">
+              <i class="bi bi-circle"></i><span>Nuevo paciente</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Historial de pacientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Detalles de pacientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="receta-medica.html">
+              <i class="bi bi-circle"></i><span>Receta medica</span>
+            </a>
+          </li>
+          <li>
+            <a href="orden-medica.html">
+              <i class="bi bi-circle"></i><span>Orden medica</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" data-bs-target="#citas-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Citas médicas</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="citas-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="cita-medica.html">
+              <i class="bi bi-circle"></i><span>Nueva cita médica</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas programadas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas pendientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas canceladas</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+      
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" href="login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Cerrar sesion</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Nuevo Paciente</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item">Mis pacientes</li>
+          <li class="breadcrumb-item active">Nuevo paciente</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="card card-custom border-0 p-3">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+          <li class="nav-item mb-3" role="presentation">
+            <button class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill" data-bs-target="#pills-personal" type="button" role="tab" aria-controls="pills-personal" aria-selected="true">Personal</button>
+          </li>
+          <li class="nav-item mb-3" role="presentation">
+            <button class="nav-link" id="pills-contacto-tab" data-bs-toggle="pill" data-bs-target="#pills-contacto" type="button" role="tab" aria-controls="pills-contacto" aria-selected="false">Contacto</button>
+          </li>
+          <li class="nav-item mb-3" role="presentation">
+            <button class="nav-link" id="pills-medica-tab" data-bs-toggle="pill" data-bs-target="#pills-medica" type="button" role="tab" aria-controls="pills-medica" aria-selected="false">Médica</button>
+          </li>
+        </ul>
+        <form>
+          <div class="tab-content" id="pills-tabContent">
+            <!-- Información Personal -->
+            <div class="tab-pane fade show active form-section" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+              <div class="row mb-3">
+                <div class="col-sm-12 col-md-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre del paciente" required>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Apellido del paciente" required>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+                  <select class="form-select" id="tipoDocumento" required>
+                    <option value="" disabled selected>Seleccione el tipo de documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="PAS">Pasaporte</option>
+                  </select>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <label for="numeroIdentificacion" class="form-label">N° de Identificación</label>
+                  <input type="text" class="form-control" id="numeroIdentificacion" placeholder="Número de identificación" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" required>
+              </div>
+              <div class="mb-3">
+                <label for="genero" class="form-label">Género</label>
+                <select class="form-select" id="genero" required>
+                  <option value="" disabled selected>Seleccione el género</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="grupoSanguineo" class="form-label">Grupo Sanguíneo</label>
+                <select class="form-select" id="grupoSanguineo" required>
+                  <option value="" disabled selected>Seleccione el grupo sanguíneo</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="estatura" class="form-label">Estatura (cm)</label>
+                <input type="number" class="form-control" id="estatura" placeholder="Estatura en centímetros" required>
+              </div>
+              <div class="mb-3">
+                <label for="peso" class="form-label">Peso (kg)</label>
+                <input type="number" class="form-control" id="peso" placeholder="Peso en kilogramos" required>
+              </div>
+            </div>
+            <!-- Información de Contacto -->
+            <div class="tab-pane fade form-section" id="pills-contacto" role="tabpanel" aria-labelledby="pills-contacto-tab">
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" placeholder="Número de teléfono" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Dirección del paciente" required>
+              </div>
+              <div class="mb-3">
+                <label for="departamento" class="form-label">Departamento</label>
+                <select class="form-select" id="departamento" required>
+                  <option value="" disabled selected>Seleccione el departamento</option>
+                  <option value="Amazonas">Amazonas</option>
+                  <option value="Antioquia">Antioquia</option>
+                  <option value="Arauca">Arauca</option>
+                  <option value="Atlántico">Atlántico</option>
+                  <option value="Bolívar">Bolívar</option>
+                  <option value="Boyacá">Boyacá</option>
+                  <option value="Caldas">Caldas</option>
+                  <option value="Caquetá">Caquetá</option>
+                  <option value="Casanare">Casanare</option>
+                  <option value="Cauca">Cauca</option>
+                  <option value="Cesar">Cesar</option>
+                  <option value="Chocó">Chocó</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Cundinamarca">Cundinamarca</option>
+                  <option value="Guainía">Guainía</option>
+                  <option value="Guaviare">Guaviare</option>
+                  <option value="Huila">Huila</option>
+                  <option value="La Guajira">La Guajira</option>
+                  <option value="Magdalena">Magdalena</option>
+                  <option value="Meta">Meta</option>
+                  <option value="Nariño">Nariño</option>
+                  <option value="Norte de Santander">Norte de Santander</option>
+                  <option value="Putumayo">Putumayo</option>
+                  <option value="Quindío">Quindío</option>
+                  <option value="Risaralda">Risaralda</option>
+                  <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                  <option value="Santander">Santander</option>
+                  <option value="Sucre">Sucre</option>
+                  <option value="Tolima">Tolima</option>
+                  <option value="Valle del Cauca">Valle del Cauca</option>
+                  <option value="Vaupés">Vaupés</option>
+                  <option value="Vichada">Vichada</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="municipio" class="form-label">Municipio</label>
+                <select class="form-select" id="municipio" required>
+                  <option value="" disabled selected>Seleccione el municipio</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="codigoPostal" class="form-label">Código Postal</label>
+                <input type="text" class="form-control" id="codigoPostal" placeholder="Código postal" required>
+              </div>
+              <div class="mb-3">
+                <label for="entidadSalud" class="form-label">Entidad de Salud</label>
+                <select class="form-select" id="entidadSalud" required>
+                  <option value="" disabled selected>Seleccione la entidad de salud</option>
+                  <option value="Sanitas">Sanitas</option>
+                  <option value="Sura">Sura</option>
+                  <option value="Compensar">Compensar</option>
+                  <option value="Nueva EPS">Nueva EPS</option>
+                  <option value="Coomeva">Coomeva</option>
+                  <option value="Salud Total">Salud Total</option>
+                  <option value="Famisanar">Famisanar</option>
+                  <option value="Cafesalud">Cafesalud</option>
+                  <option value="Medimás">Medimás</option>
+                  <option value="Aliansalud">Aliansalud</option>
+                  <option value="Ecopetrol">Ecopetrol</option>
+                  <option value="Servicio Occidental de Salud (SOS)">Servicio Occidental de Salud (SOS)</option>
+                  <option value="Mutual Ser">Mutual Ser</option>
+                  <option value="Ambuq">Ambuq</option>
+                  <option value="Cafam">Cafam</option>
+                  <option value="Salud Vida">Salud Vida</option>
+                  <option value="Capital Salud">Capital Salud</option>
+                  <option value="Asmet Salud">Asmet Salud</option>
+                  <option value="Comfachocó">Comfachocó</option>
+                  <option value="Comfamiliar Huila">Comfamiliar Huila</option>
+                  <option value="Comfamiliar Nariño">Comfamiliar Nariño</option>
+                  <option value="Comfenalco Antioquia">Comfenalco Antioquia</option>
+                  <option value="Comfenalco Valle">Comfenalco Valle</option>
+                  <option value="Emssanar">Emssanar</option>
+                  <option value="Mallamas">Mallamas</option>
+                  <option value="Mutual Ser EPS">Mutual Ser EPS</option>
+                  <option value="Capresoca">Capresoca</option>
+                  <option value="Comparta">Comparta</option>
+                  <option value="Convida">Convida</option>
+                  <option value="Dusakawi">Dusakawi</option>
+                  <option value="Ecoopsos">Ecoopsos</option>
+                  <option value="Empresas Públicas de Medellín (EPM)">Empresas Públicas de Medellín (EPM)</option>
+                  <option value="EPS Sanitas">EPS Sanitas</option>
+                  <option value="Famisanar EPS">Famisanar EPS</option>
+                  <option value="Comfama">Comfama</option>
+                  <option value="Salud Total EPS">Salud Total EPS</option>
+                  <option value="Savia Salud">Savia Salud</option>
+                </select>
+                 
+              </div>
+            </div>
+            <!-- Información Médica -->
+            <div class="tab-pane fade form-section" id="pills-medica" role="tabpanel" aria-labelledby="pills-medica-tab">
+              <div class="mb-3">
+                <label for="antecedentes" class="form-label">Antecedentes Médicos</label>
+                <textarea class="form-control" id="antecedentes" rows="3" placeholder="Describa los antecedentes médicos del paciente"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="alergias" class="form-label">Alergias</label>
+                <textarea class="form-control" id="alergias" rows="2" placeholder="Describa las alergias del paciente"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="medicamentos" class="form-label">Medicamentos Actuales</label>
+                <textarea class="form-control" id="medicamentos" rows="2" placeholder="Liste los medicamentos actuales que toma el paciente"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Registrar Paciente</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Ing. Daily Rodriguez</span></strong>. Todos los derechos reservador
+    </div>
+    <div class="credits">
+      Diseñado por:  <a href="#">Ing. Daily Rodriguez</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/chart.js/chart.umd.js"></script>
+  <script src="vendor/echarts/echarts.min.js"></script>
+  <script src="vendor/quill/quill.js"></script>
+  <script src="vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="vendor/tinymce/tinymce.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Mil sonrisas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="img/logo.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Updated: Apr 20 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="img/logo.png" alt="" width="110px">
+        <span class="d-none d-lg-block"></span>
+      </a>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item mb-3 d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item mb-3 dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0 mt-3" href="#" data-bs-toggle="dropdown">
+            <img src="img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Mi perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-gear"></i>
+                <span>Configuracion de la cuenta</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-question-circle"></i>
+                <span>Necesitas ayuda?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Desconectar</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" style="background-color: rgb(234, 244, 248);">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item mb-3">
+        <a class="nav-link " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" href="users-profile.html">
+          <i class="bi bi-person"></i>
+          <span>Perfil</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#" >
+          <i class="bi bi-person-lines-fill"></i><span>Administrador</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="personal.html" >
+              <i class="bi bi-circle"></i><span>Nuevo personal</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Medico</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Asistencial</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+
+      <li class="nav-item mb-3" >
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#" >
+          <i class="bi bi-people-fill"></i><span>Mis pacientes</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="paciente.html">
+              <i class="bi bi-circle"></i><span>Nuevo paciente</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Historial de pacientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Detalles de pacientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="receta-medica.html">
+              <i class="bi bi-circle"></i><span>Receta medica</span>
+            </a>
+          </li>
+          <li>
+            <a href="orden-medica.html">
+              <i class="bi bi-circle"></i><span>Orden medica</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" data-bs-target="#citas-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-layout-text-window-reverse"></i><span>Citas médicas</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="citas-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="cita-medica.html">
+              <i class="bi bi-circle"></i><span>Nueva cita médica</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas programadas</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas pendientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-circle"></i><span>Citas canceladas</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Tables Nav -->
+      
+
+      <li class="nav-item mb-3">
+        <a class="nav-link collapsed" href="login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Cerrar sesion</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Clinica Mil Sonrisas</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-12">
+              <div class="card info-card sales-card" style="background-color: rgb(234, 244, 248);">
+                <div class="text-center mb-4 mt-4">
+                  <img src="img/profile-img.jpg" width="125px" alt="Logo" class="img-fluid rounded-circle mb-2">
+                  <h4>Dr. Kevin Anderson</h4>
+                  <small>Especialista en Medicina Interna</small>
+              </div>
+
+              </div>
+            </div><!-- End Sales Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Citas medicas <span>|  Este mes</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <img src="img/cita.png" alt="">
+                    </div>
+                    <div class="ps-3">
+                      <h6>250</h6>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">de descuento</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            <!-- Customers Card -->
+            <div class="col-xxl-4 col-xl-6">
+
+              <div class="card info-card customers-card">
+
+
+                <div class="card-body">
+                  <h5 class="card-title">Pacientes  <span>| Este año</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">de disminución</span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div><!-- End Customers Card -->
+
+            <!-- Recent Sales -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body col-12">
+                  <h5 class="card-title d-flex justify-content-center">Detalles de pacientes</h5>
+
+                  <table class="table table-borderless datatable col-12">
+                    <thead>
+                      <tr>
+                        <th scope="col">Paciente</th>
+                        <th scope="col">Sintomas</th>
+                        <th scope="col">Orden Medica</th>
+                        <th scope="col">Enfermedad</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Carmen Torres</td>
+                        <td>Congestión, Tos, Fiebre, Estornudo</td>
+                        <td>Acetaminofen, Vitamina C</td>
+                        <td><span class="badge bg-success">Resfriado Común</span></td>
+                      </tr>
+                      <tr>
+                        <td>Carlos Martínez</td>
+                        <td>Dolor en el pecho, dificultad para respirar</td>
+                        <td>Electrocardiograma, analgésicos</td>
+                        <td><span class="badge bg-danger">Angina de pecho</span></td>
+                      </tr>
+                      <tr>
+                        <td>Juan Pérez</td>
+                        <td>Fiebre, tos, dolor de garganta</td>
+                        <td>Antibióticos, reposo, hidratación</td>
+                        <td><span class="badge bg-warning">Faringitis</span></td>
+                      </tr>
+                      <tr>
+                        <td>Sofía Rodríguez</td>
+                        <td>Dolor en las articulaciones, fatiga</td>
+                        <td>Antiinflamatorios, reposo</td>
+                        <td><span class="badge bg-danger">Artritis reumatoide</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Recent Sales -->
+
+            <!-- Top Selling -->
+            
+
+          </div>
+        </div><!-- End Left side columns -->
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+
+          <!-- Recent Activity -->
+          <div class="card">
+
+
+            <div class="card-body">
+              <h5 class="card-title">Citas de Hoy</h5>
+
+              <div class="activity">
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">9:00 AM</div>
+                  <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                  <div class="activity-content">
+                    Dariela Rodriguez <a href="#" class="fw-bold text-dark">Chequeo medico</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">12:00 PM</div>
+                  <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                  <div class="activity-content">
+                    Maria Monica Alvarez <a href="#" class="fw-bold text-dark">Dolor Punzante</a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">3:00 PM</div>
+                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                  <div class="activity-content">
+                    Daniel Aguas <a href="#" class="fw-bold text-dark">Resfriado Común </a>
+                  </div>
+                </div><!-- End activity item-->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">En curso</div>
+                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                  <div class="activity-content">
+                    Narly Arrieta <a href="#" class="fw-bold text-dark"> Ingreso por Urgencia</a>
+                  </div>
+                </div><!-- End activity item-->
+
+              </div>
+
+            </div>
+          </div><!-- End Recent Activity -->
+
+          
+
+          <!-- Website Traffic -->
+          <div class="card">
+            <div class="card-body pb-0">
+              <h5 class="card-title">Cronograma de citas</h5>
+              <div>
+                <table class="table table-borderless datatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tipo</th>
+                      <th scope="col">Hora</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> Consulta Clinica</td>
+                      <td>11:30 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Consulta en linea</td>
+                      <td>02:30 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Reunion - Dr. Pizarroh</td>
+                      <td>05:30 PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+          </div><!-- End Website Traffic -->
+          
+          <div class="card">
+            <div class="card-body pb-0">
+              <h5 class="card-title">Atenciones del Año</h5>
+
+              <div id="trafficChart" style="min-height: 330px;" class="echart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
+                    series: [{
+                      name: 'Access From',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [{
+                          value: 1048,
+                          name: 'Febrero'
+                        },
+                        {
+                          value: 735,
+                          name: 'Marzo'
+                        },
+                        {
+                          value: 580,
+                          name: 'Abril'
+                        },
+                        {
+                          value: 484,
+                          name: 'Mayo'
+                        },
+                        {
+                          value: 300,
+                          name: 'Junio'
+                        }
+                      ]
+                    }]
+                  });
+                });
+              </script>
+
+            </div>
+          </div><!-- End Website Traffic -->
+          <!-- News & Updates Traffic -->
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Ing. Daily Rodriguez</span></strong>. Todos los derechos reservador
+    </div>
+    <div class="credits">
+      Diseñado por:  <a href="#">Ing. Daily Rodriguez</a>
+    </div>
+  </footer><!-- End Footer -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/chart.js/chart.umd.js"></script>
+  <script src="vendor/echarts/echarts.min.js"></script>
+  <script src="vendor/quill/quill.js"></script>
+  <script src="vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="vendor/tinymce/tinymce.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
